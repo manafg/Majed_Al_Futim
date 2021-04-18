@@ -24,10 +24,10 @@
         .search-icon {
             width: 18px;
             margin-right: 20px;
-            //TODO add transion
+            transition: transform .3s;
 
             &:hover {
-                //TODO add transion
+                transform: scale(1.7);
             }
         }
     }
@@ -185,5 +185,13 @@
 }
 
 @keyframes scroll-move {
-    //TODO add transion
+	0% {
+		transform: translate3d(100%, 0, 0)
+	}
+	60% {
+		transform: translate3d(100%, 0, 0)
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0)
+	}
 }

@@ -2,12 +2,13 @@
 
 .slide-enter-active,
 .slide-leave-active {
-  //TODO add transion
+  transition: transform 0.2s ease;
 }
 
 .slide-enter,
 .slide-leave-to {
-  //TODO add transion
+  transform: translateX(100%);
+  transition: all 150ms ease-in 0s
 }
 
 .sidebar-backdrop {
@@ -36,10 +37,10 @@
     li {
       padding: 20px 0;
       font-size: 30px;
-      //TODO add transion
+      transition: transform .3s;
 
       &:hover {
-        //TODO add transion
+        transform: scale(1.7);
       }
 
       a {
@@ -55,7 +56,7 @@
     position: relative;
     margin: auto;
     cursor: pointer;
-    //TODO add transion
+    transition: transform .3s;
 
     &::before,
     &::after {
@@ -73,15 +74,15 @@
     }
 
     &::after {
-      //TODO add transion
+      transform: rotate(-45deg);
     }
 
     &::before {
-      //TODO add transion
+      transform: rotate(45deg);
     }
 
     &:hover {
-      //TODO add transion
+      transform: scale(1.7);
     }
   }
 }

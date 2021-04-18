@@ -58,7 +58,7 @@ $borderW: 2px;
     border-radius: 30px;
 
     &:after {
-      //TODO add transion
+      transition: all 0.3s;
       left: 0;
       top: 0;
       border-radius: 30px;
