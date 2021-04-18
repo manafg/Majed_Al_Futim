@@ -1,0 +1,71 @@
+ 
+[
+    {
+        "id": 0,
+        "tripTitle": "Chill Adventure",
+        "tripDescription": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur.",
+        "slider": [
+            {
+                "name": "desert.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "01."
+            },
+            {
+                "name": "rum.png",
+                "title": "WADI RUM LANDSCAPE",
+                "number": "02."
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "tripTitle": "Spooky Times",
+        "tripDescription": "Veritatis maxime, corporis iure repellat nesciunt animi voluptatem expedita repudiandae eligendi obcaecati consequatur iste eveniet autem officiis pariatur porro quam necessitatibus natus.",
+        "slider": [
+            {
+                "name": "rum.png",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "01."
+            },
+            {
+                "name": "desert.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "02."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "tripTitle": "Desert Madness",
+        "tripDescription": "Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.",
+        "slider": [
+            {
+                "name": "desert.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "01."
+            },
+            {
+                "name": "rum.png",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "02."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "tripTitle": "Out in the wild",
+        "tripDescription": "Veritatis maxime, corporis iure repellat nesciunt animi voluptatem expedita repudiandae eligendi obcaecati consequatur iste eveniet autem officiis pariatur porro quam necessitatibus natus.",
+        "slider": [
+            {
+                "name": "desert.svg",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "01."
+            },
+            {
+                "name": "rum.png",
+                "title": "GRAND DUNES LANDSCAPE",
+                "number": "02."
+            }
+        ]
+    }
+]

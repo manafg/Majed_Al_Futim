@@ -1,0 +1,88 @@
+@import "../../../assets/scss/shared";
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.2s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(100%);
+  transition: all 150ms ease-in 0s
+}
+
+.sidebar-backdrop {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.sidebar-panel {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  padding: 3rem 20px 2rem 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+
+  ul {
+    li {
+      padding: 20px 0;
+      font-size: 30px;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.7);
+      }
+
+      a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .close {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 18px;
+      height: 2px;
+      background-color: $secondary-color;
+      border-radius: 50px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      transform: scale(1.7);
+    }
+  }
+}
