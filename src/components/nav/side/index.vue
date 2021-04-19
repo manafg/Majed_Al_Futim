@@ -1,32 +1,12 @@
 <template>
   <div class="slider">
-    <div
-        class="left-section"
-        v-for="(slider, indexSlider) in sliderContent"
-        :key="indexSlider"
-        v-if="active === indexSlider"
-    >
-      <div class="img-slider">
-        <img :src="getUrl(slider.name)" alt="" srcset=""/>
-      </div>
-      <div class="slider-info">
-        <div class="slider-number">{{ slider.number }}</div>
-        <div class="slider-title">{{ slider.title }}</div>
-      </div>
-      <div class="slider-nav">
-        <button
-            aria-label="previous"
-            class="btn-slider prev"
-            @click.prevent="changeSlide(0)"
-        />
-        <button
-            aria-label="next"
-            class="btn-slider next"
-            @click.prevent="changeSlide(1)"
-        />
-      </div>
-    </div>
+
     <div class="right-section">
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <div class="trip-title">
         {{ tripTitle }}
       </div>
@@ -48,16 +28,7 @@ export default {
       active: 0,
     };
   },
-  methods: {
 
-    getUrl(imageName) {
-      return require("@/assets/images/" + imageName);
-    },
-
-    changeSlide: function (num) {
-      this.active = num;
-    },
-  },
 };
 </script>
 
