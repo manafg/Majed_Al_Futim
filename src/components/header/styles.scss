@@ -1,0 +1,197 @@
+@import "../../assets/scss/shared";
+
+.main-image {
+    background-image: url("~@/assets/images/main.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.upper-section {
+
+    .header {
+        @extend .d-flex,
+        .align-center,
+        .space-between;
+        padding-top: 20px;
+
+        .logo {
+            width: 60px;
+        }
+
+        .search-icon {
+            width: 18px;
+            margin-right: 20px;
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(1.7);
+            }
+        }
+    }
+
+    .trips-section-description {
+        position: relative;
+        z-index: 1;
+        top: 25%;
+        width: 70%;
+        margin: auto;
+        .title {
+            font-family: Noe Display;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 60px;
+            margin-bottom: 15px;
+            text-align: center;
+            line-height: 1;
+            color: $white-color;
+        }
+
+        .sub-title {
+            font-family: Larsseit;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: Larsseit;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            margin-top: 25px;
+            line-height: 1;
+            text-align: center;
+            color: $white-color;
+            width: 100%;
+        }
+
+
+    }
+
+    .upper-section-container {
+        height: 100vh;
+
+        .social-icons {
+            flex-direction: column;
+            bottom: 250px;
+            right: 15px;
+        }
+
+        .scroll-container {
+            position: absolute;
+            bottom: 320px;
+            left: -48px;
+            transform: rotate( -90deg);
+            display: flex;
+            align-items: center;
+            z-index: 1;
+            .hscroll-line{
+                    position: relative;
+                    height: 2px;
+                    width: 80px;
+                    background: rgba(0, 201, 224, .5);
+                    border-radius: 13px;
+                    display: inline-block;
+                    margin-right: 15px;
+                    overflow: hidden;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient( 180deg, #09F4F4 0%, #00C9E0 100%);
+                    width: 80px;
+                    height: 2px;
+                    animation: scroll-move 2s infinite;
+                }
+            }
+            .scroll-text {
+                font-family: Larsseit;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 15px;
+                line-height: 190%;
+                letter-spacing: 0.05em;
+                color: $white-color;
+                opacity: 0.9;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .divider {
+        background: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, $black-color 76.64%, $black-color 100%);
+        height: 377px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    
+}
+
+// responsive
+
+@media screen and (min-width: 992px) {
+    .upper-section {
+        .header {
+            .search-icon {
+                width: 18px;
+                margin-right: 40px;
+            }
+        }
+
+        .trips-section-description {
+            top: 10%;
+            min-height: calc(100vh - 248px);
+            width: 100%;
+            .title {
+                font-size: 120px;
+                line-height: 153px;
+                margin-top: 120px;
+            }
+
+            .sub-title {
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 15px;
+            }
+
+            p {
+                width: 643px;
+                margin: auto;
+                font-size: 17px;
+                line-height: 25px;
+                margin-top: 50px;
+            }
+        }
+
+        .upper-section-container {
+            .social-icons {
+                bottom: 192px;
+                right: 0;
+            }
+            
+            .scroll-container {
+                bottom: 262px;
+            }
+        }
+    }
+}
+
+@keyframes scroll-move {
+	0% {
+		transform: translate3d(100%, 0, 0)
+	}
+	60% {
+		transform: translate3d(100%, 0, 0)
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0)
+	}
+}

@@ -1,0 +1,156 @@
+@import "../../../assets/scss/shared";
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: 0.5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transition: 0.5s;
+}
+.sidebar-backdrop {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  cursor: pointer;
+}
+
+.sidebar-panel {
+  transition: 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  display: table;
+  height: 100vh;
+  z-index: 999;
+  padding: 3rem 20px 2rem 20px;
+  width: 30%;
+  background-color: #171717;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 30vw;
+  }
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: drop 7s 0s infinite;
+    animation: drop 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+
+  @-webkit-keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  @keyframes drop {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+
+  ul {
+    li {
+      padding: 20px 0;
+      font-size: 30px;
+      transition: transform .3s;
+      color: white;
+
+      &:hover {
+        transform: scale(1.7);
+      }
+
+      a {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .close {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 18px;
+      height: 2px;
+      background-color: $secondary-color;
+      border-radius: 50px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &:hover {
+      transform: scale(1.7);
+    }
+  }
+}

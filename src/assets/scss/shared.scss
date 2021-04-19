@@ -1,0 +1,173 @@
+@import './normalize.scss';
+@import "./container";
+
+@font-face {
+  font-family: "Larsseit";
+  src: url("~@/assets/fonts/Larsseit.eot");
+  src: url("~@/assets/fonts/Larsseit.eot?#iefix") format("embedded-opentype"),
+  url("~@//assets/fonts/Larsseit.woff2") format("woff2"),
+  url("~@/assets/fonts/Larsseit.woff") format("woff"),
+  url("~@/assets/fonts/Larsseit.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noe Display";
+  src: url("~@/assets/fonts/NoeDisplay-Bold.eot");
+  src: url("~@/assets/fonts/NoeDisplay-Bold.eot?#iefix") format("embedded-opentype"),
+  url("~@/assets/fonts/NoeDisplay-Bold.woff2") format("woff2"),
+  url("~@/assets/fonts/NoeDisplay-Bold.woff") format("woff"),
+  url("~@/assets/fonts/NoeDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+$primary-color: #00C9E0;
+$secondary-color: #41ead4;
+$light-blue: #09F4F4;
+$white-color: #FFFFFF;
+$black-color: #011627;
+
+$dark-blue-color: rgba(0, 201, 224, 0.2);
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Larsseit";
+  color: $white-color;
+  background-color: $black-color;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.social-icons {
+  position: absolute;
+  display: flex;
+  z-index: 99;
+  right: 0;
+
+  a {
+    img {
+      margin-bottom: 25px;
+      max-width: 24px;
+      max-height: 28px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.7);
+      }
+    }
+
+    position: relative;
+  }
+
+  &.at-bottom {
+    right: 0;
+    flex-wrap: wrap;
+    width: 150;
+
+    a {
+      img {
+        margin-right: 25px;
+        max-width: 24px;
+      }
+
+      position: relative;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 132px;
+      height: 12px;
+      bottom: 10;
+      border-bottom: 2px solid $secondary-color;
+      border-right: 2px solid $secondary-color;
+      margin-top: -16px;
+    }
+
+    .share-it {
+      width: 100%;
+      font-family: Larsseit;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 150%;
+      margin-bottom: 30;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.sidebar-panel-nav {
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    width: 167px;
+    height: 62px;
+    font-size: 16px;
+    line-height: 21px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30;
+      height: 2px;
+    }
+  }
+}
